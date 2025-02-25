@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif; /* Changed font to Times New Roman */
+    font-size: 120%; /* Increased font size by 20% */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    animation: borderMove 10s linear infinite;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    background: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #fff 3px solid; /* White border */
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Ramaraja', serif; /* Changed font to Ramaraja */
+    font-weight: 110%; /* Increased boldness by 10% */
+    text-align: center;
+    margin: 0;
+    font-size: 28.8px; /* Decreased by 20% from original 36px */
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 2px 2px 4px #fff; /* White outline */
+    text-transform: uppercase; /* Convert to uppercase */
+    line-height: 1.2; /* Added extra height */
+    letter-spacing: 0.07em; /* Added extra length */
+}
+
+header p {
+    text-align: center;
+    margin: 5px 0;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+section {
+    padding: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+section:target {
+    opacity: 1;
+}
+
+#summary {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#projects {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#skills {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#certificates {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#education {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#contact {
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+#contact .contact-links {
+    background-color: #BBB5FF; /* Light lavender background */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact .contact-links a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    margin: 0 40px; /* Increased space */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+#contact .contact-links a img {
+    width: 32px; /* Standardized size */
+    height: 32px; /* Standardized size */
+    vertical-align: middle;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
+}
+
+#contact .contact-links a[href*="linkedin.com"] img {
+    width: 36px; /* Increased size */
+    height: 36px; /* Increased size */
+}
+
+#contact .contact-links a[href*="github.com"] img {
+    width: 48px; /* Increased size */
+    height: 48px; /* Increased size */
+}
+
+#contact .contact-links a[href*="leetcode.com"] img {
+    width: 36px; /* Increased size */
+    height: 36px; /* Increased size */
+}
+
+#contact .contact-links a[href*="mail.google.com"] img {
+    width: 48px; /* Increased size */
+    height: 48px; /* Increased size */
+}
+
+#contact .contact-links a[href*="youtube.com"] img {
+    width: 48px; /* Increased width */
+    height: 32px; /* Standardized height */
+}
+
+#contact .contact-links a:hover img {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+#contact .contact-links a:hover {
+    text-decoration: underline;
+    color: #fff; /* White text */
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+section h2 {
+    font-family: 'Hammersmith One', sans-serif; /* Changed font to Hammersmith One */
+    font-weight: 110%; /* Increased boldness by 10% */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px; /* Decreased font size */
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 2px 2px 4px #fff; /* White outline */
+    border-bottom: 2px solid #fff; /* White underline */
+    padding-bottom: 10px;
+    text-transform: uppercase; /* Convert to uppercase */
+}
+
+section h3 {
+    font-family: 'Hammersmith One', sans-serif; /* Changed font to Hammersmith One */
+    font-weight: 110%; /* Increased boldness by 10% */
+    font-size: 17px; /* Decreased font size */
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 2px 2px 4px #fff; /* White outline */
+    border-bottom: 1px solid #fff; /* White underline */
+    padding-bottom: 5px;
+    text-transform: uppercase; /* Convert to uppercase */
+}
+
+section p, section ul {
+    font-size: 21.6px; /* Increased by 20% from original 18px */
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #BBB5FF; /* Light lavender background */
+    margin: 5px 10px; /* Added margin for spacing */
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.skill-bar {
+    width: 84%; /* Increased length by 20% */
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.skill-bar-fill {
+    height: 16px; /* Decreased by 20% */
+    background-color: #9370DB; /* Medium purple background */
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+footer a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff; /* White text */
+    background-color: #BBB5FF; /* Light lavender background */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    background-color: #d3d3d3; /* Light grey background on hover */
+}
+
+nav ul li a {
+    font-family: 'Signika', sans-serif; /* Changed button font to Signika */
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-size: 15.4px; /* Increased by 10% from original 14px */
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 12px;
+    background-color: #BBB5FF; /* Light lavender background */
+    font-weight: 770; /* Made font bolder by 10% */
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #000; /* Black text */
+    transform: translateY(-5px);
+    background: #BBB5FF; /* Light lavender background */
+}
+
+nav ul li a.active {
+    background: #9370DB; /* Medium purple background */
+    color: #fff; /* White text */
+}
+
+nav ul li a.inactive-summary {
+    background: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+}
+
+nav ul li a[href="#summary"].active {
+    background: #9370DB; /* Medium purple background */
+    color: #fff; /* White text */
+}
+
+.project {
+    background: #BBB5FF; /* Light lavender background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.project h3 {
+    font-family: 'Hammersmith One', sans-serif; /* Changed font to Hammersmith One */
+    font-weight: 110%; /* Increased boldness by 10% */
+    margin-top: 0;
+}
+
+.project p {
+    font-size: 21.6px; /* Increased by 20% from original 18px */
+    margin: 10px 0 0;
+}
+
+.certificate-img {
+    width: 50%; /* Decreased size by 50% */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 5px solid #4B0082; /* Dark purple border with high width */
+    padding: 10px; /* Added padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(75, 0, 130, 0.5), 0 0 20px rgba(75, 0, 130, 0.4), 0 0 25px rgba(75, 0, 130, 0.3); /* More attractive shadow effect */
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth zoom transition */
+    transform-origin: center; /* Ensure zooming from the center */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-image: linear-gradient(45deg, #4B0082, #9370DB, #4B0082) 1; /* Gradient border */
+}
+
+.certificate-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    border-image: linear-gradient(45deg, #9370DB, #4B0082, #9370DB) 1; /* Gradient border on hover */
+}
+
+.certificate-img.fullscreen {
+    width: 57.5vw; /* 50% of screen width increased by 15% */
+    height: auto; /* Maintain original aspect ratio */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 9999;
+    background-color: #BBB5FF; /* Light lavender background */
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out; /* Smooth zoom transition */
+}
+
+.certificate-img.fullscreen::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background */
+    z-index: 9998;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.certificate-img.slide-in {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.certificate-img.slide-out {
+    transform: translateX(0);
+    opacity: 1;
+    animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+button {
+    font-family: 'Signika', sans-serif; /* Changed button font to Signika */
+    padding: 10px 15px;
+    background-color: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+    font-size: 15.4px; /* Increased by 10% from original 14px */
+    font-weight: 770; /* Made font bolder by 10% */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9370DB; /* Medium purple background */
+    color: #000; /* Black text */
+}
+
+button.active {
+    background: #9370DB; /* Medium purple background */
+    color: #fff; /* White text */
+}
+
+nav ul li a, button {
+    font-family: 'Signika', sans-serif; /* Changed button font to Signika */
+    padding: 10px 15px;
+    background-color: #BBB5FF; /* Light lavender background */
+    color: #000; /* Black text */
+    font-size: 15.4px; /* Increased by 10% from original 14px */
+    font-weight: 770; /* Made font bolder by 10% */
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+nav ul li a:hover, button:hover {
+    background: #9370DB; /* Medium purple background */
+    color: #000; /* Black text */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes borderMove {
+    0% {
+        border-color: #fff;
+    }
+    25% {
+        border-color: #ff00ff;
+    }
+    50% {
+        border-color: #00ff00;
+    }
+    75% {
+        border-color: #ff0000;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+.profile-photo {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #fff; /* Reduced glow effect by 50% */
+    border: 3px solid #fff; /* White border */
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, border-radius 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Smooth zoom transition */
+    transform-origin: center; /* Ensure zooming from the center */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Light zoom effect */
+}
+
+.profile-photo:active {
+    transform: scale(1); /* Reset scale */
+    width: 50vw; /* Half screen width */
+    height: 75vh; /* Increased height */
+    border-radius: 0; /* Square shape */
+    position: fixed;
+    top: 12.5vh; /* Adjusted to show fully */
+    left: 25vw; /* Center horizontally */
+    z-index: 9999;
+    background-color: #BBB5FF; /* Light lavender background */
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out, border-radius 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Smooth zoom transition */
+}
+
+.profile-photo:active::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background */
+    z-index: 9998;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.profile-photo:not(:active)::after {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

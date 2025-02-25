@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay Shankar M - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="viji img.jpg" alt="Vijay Shankar M" class="profile-photo">
+            <h1>Vijay Shankar M</h1>
+            <p>Computer Science and Engineering Student | Cloud Enthusiast</p>
+            <nav>
+                <ul>
+                    <li><a href="My Resume (1).pdf" download>Download Resume</a></li>
+                    <li><a href="#summary" class="active" onclick="showSection('summary', this)">Summary</a></li>
+                    <li><a href="#projects" onclick="showSection('projects', this)">Projects</a></li>
+                    <li><a href="#skills" onclick="showSection('skills', this)">Skills</a></li>
+                    <li><a href="#certificates" onclick="showSection('certificates', this)">Certificates</a></li>
+                    <li><a href="#education" onclick="showSection('education', this)">Education</a></li>
+                    <li><a href="#contact" onclick="showSection('contact', this)">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Summary Section -->
+        <section id="summary" style="display:none;">
+            <div class="container">
+                <h2>Summary</h2>
+                <div class="project">
+                    <p>A motivated Computer Science Engineering student with a strong interest in cloud computing and AWS. Eager to leverage my technical skills and passion for cloud technologies to contribute to innovative projects, enhance scalability, and drive efficient solutions in a dynamic environment. Seeking opportunities to grow and excel in the cloud domain.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" style="display:none;">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Student Teacher Performance Prediction Model</h3>
+                    <p>Developed a machine learning-based model to predict and analyze student-teacher performance by evaluating key academic and engagement metrics. Utilized Python, Pandas, and Scikit-learn for data preprocessing, feature engineering, and model training. Implemented algorithms like Linear Regression and Decision Trees to achieve accurate predictions, providing actionable insights to improve educational outcomes.</p>
+                </div>
+                <div class="project">
+                    <h3>Carbon Footprint Web Application for Indian Coal Mines</h3>
+                    <p>Developing a web application designed to obtain the carbon neutrality and reduction of carbon emissions from coal mines. It suggests strategies to adopt a green environment, provides cleaner technologies, and focuses on afforestation. The application tracks carbon credits, total emissions, and overall calculations, offering a user-friendly interface for inputting data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" style="display:none;">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="project">
+                    <ul>
+                        <li><strong>Programming Languages:</strong> Python, Java</li>
+                        <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Database:</strong> MySQL, SQLite</li>
+                        <li><strong>UI & UX:</strong> Canva, Figma, Photoshop</li>
+                        <li><strong>Software & Tools:</strong> Microsoft Word, Excel, PowerPoint</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" style="display:none;">
+            <div class="container">
+                <h2>Certificates</h2>
+                <div class="project">
+                    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+                        <p style="font-size: 12px; margin-bottom: 10px; align-self: flex-start;">Click to view certificate</p>
+                        <ul style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+                            <li>
+                                <button class="certificate-button active" onclick="showCertificate('aws-certificate.png', this)">AWS Cloud Foundations</button>
+                            </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('oracle-certificate.png', this)">Oracle Cloud Infrastructure</button>
+                            </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('mernstack-certificate.png', this)">Introduction to MERN Stack</button>
+                            </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('hackerrank-java-basic.png', this)">HackerRank Java Basic</button>
+                            </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('figma-fundamentals.jpg', this)">Figma Fundamentals</button>
+                            </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('cloud-practitioner-essentials.png', this)">Cloud Practitioner Essentials</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="certificate-display">
+                        <img id="certificate-img" src="aws-certificate.png" alt="Certificate" class="certificate-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" style="display:none;">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="project">
+                    <ul>
+                        <li><strong>BE - Computer Science and Engineering</strong><br>Karpagam Institute Of Technology, Coimbatore, Tamil Nadu<br>Expected Graduation: 11/2026<br>CGPA: 7.5</li>
+                        <li><strong>HSC</strong><br>Sri SRV Matric Hr Sec School, Attur Salem<br>05/2022<br>Score: 73.5%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="display:none;">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="project">
+                    <p>If you would like to get in touch, please feel free to reach out via email or phone.</p>
+                    <p>Email: vijishankar200412@gmail.com | Phone: 6379233708 | Location: Coimbatore, Tamil Nadu</p>
+                    <div class="contact-links">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijishankar200412@gmail.com" target="_blank">
+                            <img src="email-logo.png" alt="Email">
+                        </a>
+                        <a href="https://github.com/VijayShankarM" target="_blank">
+                            <img src="github-logo.png" alt="GitHub">
+                        </a>
+                        <a href="https://leetcode.com/u/VijayShankarM/" target="_blank">
+                            <img src="leetcode-logo.png" alt="LeetCode">
+                        </a>
+                        <a href="https://www.linkedin.com/in/vijay-murugan-83962b269/" target="_blank">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.youtube.com/@vijishankar2623" target="_blank">
+                            <img src="youtube-logo.png" alt="YouTube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content removed -->
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
