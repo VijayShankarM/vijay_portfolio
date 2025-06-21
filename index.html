@@ -10,8 +10,8 @@
 <body>
     <header>
         <div class="container">
-            <img src="viji img.jpg" alt="Vijay Shankar M" class="profile-photo">
-            <h1>Vijay Shankar M</h1>
+            <img src="viji img.jpg" alt="Vijayshankar Murugan" class="profile-photo">
+            <h1>Vijayshankar Murugan</h1>
             <p>Computer Science and Engineering Student | Cloud Enthusiast</p>
             <nav>
                 <ul>
@@ -97,6 +97,9 @@
                         <p style="font-size: 12px; margin-bottom: 10px; align-self: flex-start;">Click to view certificate</p>
                         <ul style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center;">
                             <li>
+                                <button class="certificate-button" onclick="showCertificate('AWS gbl.png', this)">AWS Global Certification</button>
+                            </li>
+                            <li>
                                 <button class="certificate-button active" onclick="showCertificate('aws-certificate.png', this)">AWS Cloud Foundations</button>
                             </li>
                             <li>
@@ -114,10 +117,14 @@
                             <li>
                                 <button class="certificate-button" onclick="showCertificate('cloud-practitioner-essentials.png', this)">Cloud Practitioner Essentials</button>
                             </li>
+                            <li>
+                                <button class="certificate-button" onclick="showCertificate('NPTEL - CC.png', this)">Cloud Computing - NPTEL</button>
+                            </li>
+                            
                         </ul>
                     </div>
                     <div id="certificate-display">
-                        <img id="certificate-img" src="aws-certificate.png" alt="Certificate" class="certificate-img">
+                        <img id="certificate-img" src="AWS gbl.png" alt="Certificate" class="certificate-img">
                     </div>
                 </div>
             </div>
