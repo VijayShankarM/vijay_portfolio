@@ -5,166 +5,523 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijay Shankar M - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="viji img.jpg" alt="Vijayshankar Murugan" class="profile-photo">
-            <h1>Vijayshankar Murugan</h1>
-            <p>Computer Science and Engineering Student | Cloud Enthusiast</p>
-            <nav>
-                <ul>
-                    <li><a href="viji res.pdf" download="viji res.pdf">Download Resume</a></li>
-                    <li><a href="#summary" class="active" onclick="showSection('summary', this)">Summary</a></li>
-                    <li><a href="#projects" onclick="showSection('projects', this)">Projects</a></li>
-                    <li><a href="#skills" onclick="showSection('skills', this)">Skills</a></li>
-                    <li><a href="#certificates" onclick="showSection('certificates', this)">Certificates</a></li>
-                    <li><a href="#education" onclick="showSection('education', this)">Education</a></li>
-                    <li><a href="#contact" onclick="showSection('contact', this)">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Vijayshankar Murugan</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <!-- Summary Section -->
-        <section id="summary" style="display:none;">
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
             <div class="container">
-                <h2>Summary</h2>
-                <div class="project">
-                    <p>A motivated Computer Science Engineering student with a strong interest in cloud computing and AWS. Eager to leverage my technical skills and passion for cloud technologies to contribute to innovative projects, enhance scalability, and drive efficient solutions in a dynamic environment. Seeking opportunities to grow and excel in the cloud domain.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" style="display:none;">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>Face Recognition Attendance System Using AWS</h3>
-                    <p>Developed a serverless face recognition attendance system using AWS Free Tier services, enabling employees to scan their faces via a web-based interface, with Amazon Rekognition verifying attendance. The system includes an admin dashboard for employee registration and attendance tracking, with records stored in Amazon DynamoDB. The frontend is hosted on Amazon S3 & CloudFront, while AWS Lambda and API Gateway handle backend processing. Key technologies include JavaScript (Webcam integration), S3, CloudFront, Rekognition, API Gateway, and DynamoDB, ensuring a scalable, secure, and efficient solution that eliminates manual attendance tracking through automated facial recognition.</p>
-                </div>
-                <div class="project">
-                    <h3>URL Shortener with Click Analytics</h3>
-                    <p>Developed a serverless URL shortener using AWS Free Tier services, leveraging API Gateway, AWS Lambda, DynamoDB, and S3. Implemented short link redirection with real-time click analytics, capturing user IP, timestamp, and user-agent data. Optimized analytics by filtering out bot and non-browser traffic (e.g., WhatsApp, Telegram) to ensure accurate browser-based tracking. Designed a secure and scalable architecture, enforced CORS policies, and ensured smooth frontend-backend integration.</p>
-                </div>
-                <div class="project">
-                    <h3>Job Portal using AWS</h3>
-                    <p>A serverless job portal using AWS S3 for hosting, DynamoDB for storage, Lambda for backend logic, API Gateway for REST API, and CloudFront for HTTPS. Users can view and add job listings dynamically.</p>
-                    <a href="http://son-goku-01.s3-website-us-east-1.amazonaws.com/" target="_blank">Click to view JOB PORTAL</a>
-                </div>
-                <div class="project">
-                    <h3>Ecommerce using AWS</h3>
-                    <p>This is a serverless e-commerce website using AWS Free Tier. The frontend is on S3 with CloudFront, and the backend uses API Gateway, Lambda, and DynamoDB. The admin panel manages products, while customers can add items to the cart and place orders.</p>
-                    <a href="http://ecommerce-001.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Client Page</a> | 
-                    <a href="http://ecommerce-001.s3-website-us-east-1.amazonaws.com/admin.html" target="_blank">Admin Page</a>
-                </div>
-                <div class="project">
-                    <h3>Student Teacher Performance Prediction Model</h3>
-                    <p>Developed a machine learning-based model to predict and analyze student-teacher performance by evaluating key academic and engagement metrics. Utilized Python, Pandas, and Scikit-learn for data preprocessing, feature engineering, and model training. Implemented algorithms like Linear Regression and Decision Trees to achieve accurate predictions, providing actionable insights to improve educational outcomes.</p>
-                </div>
-                <div class="project">
-                    <h3>Carbon Footprint Web Application for Indian Coal Mines</h3>
-                    <p>Developing a web application designed to obtain the carbon neutrality and reduction of carbon emissions from coal mines. It suggests strategies to adopt a green environment, provides cleaner technologies, and focuses on afforestation. The application tracks carbon credits, total emissions, and overall calculations, offering a user-friendly interface for inputting data.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" style="display:none;">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="project">
-                    <ul>
-                        <li><strong>Cloud:</strong> AWS Cloud Services</li>
-                        <li><strong>Programming Languages:</strong> Python, Java</li>
-                        <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-                        <li><strong>Database:</strong> MySQL</li>
-                        <li><strong>UI & UX:</strong> Canva, Figma, Photoshop</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" style="display:none;">
-            <div class="container">
-                <h2>Certificates</h2>
-                <div class="project">
-                    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-                        <p style="font-size: 12px; margin-bottom: 10px; align-self: flex-start;">Click to view certificate</p>
-                        <ul style="margin: 0; display: flex; flex-wrap: wrap; justify-content: center;">
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('AWS gbl.png', this)">AWS Global Certification</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button active" onclick="showCertificate('aws-certificate.png', this)">AWS Cloud Foundations</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('oracle-certificate.png', this)">Oracle Cloud Infrastructure</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('mernstack-certificate.png', this)">Introduction to MERN Stack</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('hackerrank-java-basic.png', this)">HackerRank Java Basic</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('figma-fundamentals.jpg', this)">Figma Fundamentals</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('cloud-practitioner-essentials.png', this)">Cloud Practitioner Essentials</button>
-                            </li>
-                            <li>
-                                <button class="certificate-button" onclick="showCertificate('NPTEL - CC.png', this)">Cloud Computing - NPTEL</button>
-                            </li>
-                            
-                        </ul>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-line">Hello, I'm</span>
+                            <span class="title-name">Vijayshankar Murugan</span>
+                            <span class="title-role">Cloud Enthusiast & Developer</span>
+                        </h1>
+                        <p class="hero-description">
+                            I am a motivated Computer Science Engineering student passionate about cloud computing, AWS services, and building scalable solutions. I strive to leverage my technical skills and enthusiasm for cloud technologies to contribute to innovative projects, enhance scalability, and drive efficient solutions in a dynamic environment.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="viji res.pdf" download class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </a>
+                            <button class="btn btn-secondary" onclick="openContactModal()">
+                                <i class="fas fa-envelope"></i>
+                                Get In Touch
+                            </button>
+                        </div>
                     </div>
-                    <div id="certificate-display">
-                        <img id="certificate-img" src="AWS gbl.png" alt="Certificate" class="certificate-img">
+                    <div class="hero-image">
+                        <div class="profile-card">
+                            <img src="viji img.jpg" alt="Vijayshankar Murugan" class="profile-photo">
+                            <div class="profile-glow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education" style="display:none;">
+        <section id="education" class="section">
             <div class="container">
-                <h2>Education</h2>
-                <div class="project">
-                    <ul>
-                        <li><strong>BE - Computer Science and Engineering</strong><br>Karpagam Institute Of Technology, Coimbatore, Tamil Nadu<br>Expected Graduation: 11/2026<br>CGPA: 7.5</li>
-                        <li><strong>HSC</strong><br>Sri SRV Matric Hr Sec School, Attur Salem<br>05/2022<br>Score: 73.5%</li>
-                    </ul>
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>B.E Computer Science and Engineering</h3>
+                            <div class="education-duration">2022 – 2026</div>
+                        </div>
+                        <div class="education-institution">
+                            <i class="fas fa-university"></i>
+                            <span>Karpagam Institute of Technology</span>
+                        </div>
+                        <div class="education-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Coimbatore, Tamil Nadu</span>
+                        </div>
+                        <div class="education-score">
+                            <i class="fas fa-star"></i>
+                            <span><strong>CGPA:</strong> 7.5</span>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>HSC</h3>
+                            <div class="education-duration">2021 – 2022</div>
+                        </div>
+                        <div class="education-institution">
+                            <i class="fas fa-school"></i>
+                            <span>Sri SRV Matric Hr Sec School</span>
+                        </div>
+                        <div class="education-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Attur, Salem</span>
+                        </div>
+                        <div class="education-score">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>Score:</strong> 73.5%</span>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>SSLC</h3>
+                            <div class="education-duration">2019 – 2020</div>
+                        </div>
+                        <div class="education-institution">
+                            <i class="fas fa-school"></i>
+                            <span>Sri SRV Matric Hr Sec School</span>
+                        </div>
+                        <div class="education-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Attur, Salem</span>
+                        </div>
+                        <div class="education-score">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>Score:</strong> 86%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Face Recognition Attendance System</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">DynamoDB</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Serverless face recognition attendance system using AWS Free Tier services. 
+                            Features web-based interface, Amazon Rekognition verification, and admin dashboard.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://youtu.be/iDI_SKn26Sk?si=zOnJcAVRZ1VP2qY5" target="_blank" class="project-link">
+                                <i class="fab fa-youtube"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Job Portal</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS S3</span>
+                                <span class="tech-tag">DynamoDB</span>
+                                <span class="tech-tag">CloudFront</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Serverless job portal with dynamic job listings, user-friendly interface, 
+                            and secure architecture using AWS services. The application features a comprehensive 
+                            job search functionality with filtering options and a detailed application form.
+                        </p>
+                        <div class="project-links">
+                            <a href="http://jobportalhost.s3-website-us-east-1.amazonaws.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Viewers Page
+                            </a>
+                            <a href="http://jobportalhost.s3-website-us-east-1.amazonaws.com/admin.html" target="_blank" class="project-link">
+                                <i class="fas fa-cog"></i>
+                                Admin Page
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Task Manager</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">DynamoDB</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Fully serverless task management (To-Do) web application built using AWS Free Tier services. 
+                            Features CRUD operations, priority levels, due dates, and modern UI with Tailwind CSS.
+                        </p>
+                        <div class="project-links">
+                            <a href="http://taskmana.s3-website-us-east-1.amazonaws.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>URL Shortener with Analytics</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">API Gateway</span>
+                                <span class="tech-tag">S3</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Serverless URL shortener with real-time click analytics, capturing user data 
+                            and filtering bot traffic for accurate browser-based tracking.
+                        </p>
+                        <div class="project-links">
+                            <a href="http://urlshortanaltics.s3-website-us-east-1.amazonaws.com" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>E-commerce Platform</h3>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Serverless</span>
+                                <span class="tech-tag">Admin Panel</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Complete serverless e-commerce solution with admin panel for product management 
+                            and customer shopping experience.
+                        </p>
+                        <div class="project-links">
+                            <a href="http://ecommerce-001.s3-website-us-east-1.amazonaws.com/index.html" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Client Demo
+                            </a>
+                            <a href="http://ecommerce-001.s3-website-us-east-1.amazonaws.com/admin.html" target="_blank" class="project-link">
+                                <i class="fas fa-cog"></i>
+                                Admin Panel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-content">
+                    <div class="skills-category">
+                        <h3 class="category-title">Cloud & DevOps</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <span class="skill-name">AWS Cloud Services</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <span class="skill-name">Serverless Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">Programming</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <span class="skill-name">Java</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">Web Development</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span class="skill-name">HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span class="skill-name">CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <span class="skill-name">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h3 class="category-title">Design & Tools</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <span class="skill-name">Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <span class="skill-name">Canva</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-image"></i>
+                                </div>
+                                <span class="skill-name">Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certificates-content">
+                    <div class="certificate-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="aws">AWS</button>
+                        <button class="filter-btn" data-filter="cloud">Cloud</button>
+                        <button class="filter-btn" data-filter="development">Development</button>
+                    </div>
+                    <div class="certificates-grid">
+                        <div class="certificate-card" data-category="aws">
+                            <div class="certificate-preview">
+                                <img src="aws-certificate.png" alt="AWS Cloud Foundations" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>AWS Cloud Foundations</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="aws">
+                            <div class="certificate-preview">
+                                <img src="AWS gbl.png" alt="AWS Global Certification" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>AWS Global Certification</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="cloud">
+                            <div class="certificate-preview">
+                                <img src="oracle-certificate.png" alt="Oracle Cloud Infrastructure" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>Oracle Cloud Infrastructure</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="development">
+                            <div class="certificate-preview">
+                                <img src="mernstack-certificate.png" alt="MERN Stack" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>Introduction to MERN Stack</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="development">
+                            <div class="certificate-preview">
+                                <img src="hackerrank-java-basic.png" alt="HackerRank Java" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>HackerRank Java Basic</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="development">
+                            <div class="certificate-preview">
+                                <img src="figma-fundamentals.jpg" alt="Figma Fundamentals" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>Figma Fundamentals</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="aws">
+                            <div class="certificate-preview">
+                                <img src="cloud-practitioner-essentials.png" alt="Cloud Practitioner" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>Cloud Practitioner Essentials</h3>
+                        </div>
+
+                        <div class="certificate-card" data-category="cloud">
+                            <div class="certificate-preview">
+                                <img src="NPTEL - CC.png" alt="NPTEL Cloud Computing" class="certificate-img">
+                                <div class="certificate-overlay">
+                                    <button class="view-cert-btn">
+                                        <i class="fas fa-eye"></i>
+                                        View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                            <h3>Cloud Computing - NPTEL</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" style="display:none;">
+        <section id="contact" class="section">
             <div class="container">
-                <h2>Contact</h2>
-                <div class="project">
-                    <p>If you would like to get in touch, please feel free to reach out via email or phone.</p>
-                    <p>Email: vijishankar200412@gmail.com | Phone: 6379233708 | Location: Coimbatore, Tamil Nadu</p>
-                    <div class="contact-links">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijishankar200412@gmail.com" target="_blank">
-                            <img src="email-logo.png" alt="Email">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>vijishankar200412@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 6379233708</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Coimbatore, Tamil Nadu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/VijayShankarM" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://github.com/VijayShankarM" target="_blank">
-                            <img src="github-logo.png" alt="GitHub">
+                        <a href="https://www.linkedin.com/in/vijay-murugan-83962b269/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://leetcode.com/u/VijayShankarM/" target="_blank">
-                            <img src="leetcode-logo.png" alt="LeetCode">
+                        <a href="https://leetcode.com/u/VijayShankarM/" target="_blank" class="social-link">
+                            <i class="fas fa-code"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/vijay-murugan-83962b269/" target="_blank">
-                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        <a href="https://www.youtube.com/@vijishankar2623" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://www.youtube.com/@vijishankar2623" target="_blank">
-                            <img src="youtube-Logo.png" alt="YouTube">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijishankar200412@gmail.com" target="_blank" class="social-link">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
@@ -172,9 +529,39 @@
         </section>
     </main>
 
-    <footer>
-        <!-- Footer content removed -->
-    </footer>
+    <!-- Certificate Modal -->
+    <div class="modal" id="certificateModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Certificate" class="modal-image">
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content contact-modal">
+            <span class="close-modal" onclick="closeContactModal()">&times;</span>
+            <h2>Send Me a Message</h2>
+            <div class="contact-form-info">
+                <p>Choose your preferred way to send me a message:</p>
+                <div class="contact-form-actions">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vijishankar200412@gmail.com&su=Portfolio%20Inquiry&body=Hello%20Vijayshankar,%0A%0AI%20would%20like%20to%20connect%20with%20you.%0A%0ABest%20regards," class="btn btn-primary" target="_blank">
+                        <i class="fab fa-google"></i>
+                        Gmail
+                    </a>
+                    <a href="mailto:vijishankar200412@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Vijayshankar,%0A%0AI%20would%20like%20to%20connect%20with%20you.%0A%0ABest%20regards," class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        Email Client
+                    </a>
+                    <button class="btn btn-secondary" onclick="closeContactModal()">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
